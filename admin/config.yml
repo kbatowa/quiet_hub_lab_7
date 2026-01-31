@@ -1,0 +1,75 @@
+# Quiet Hub Lab 7 — Decap CMS (admin)
+# /admin/config.yml
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Draft/Review/Publish workflow (approval before going live)
+publish_mode: editorial_workflow
+
+# Media uploads (optional)
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# Optional: show preview links
+site_url: "https://quiet-hub.netlify.app"
+
+collections:
+  - name: "site_data"
+    label: "Contenu du site"
+    files:
+      - label: "Événements"
+        name: "events"
+        file: "data/events.json"
+        format: "json"
+        fields:
+          - label: "Événements"
+            name: "events"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.date}}"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Date (YYYY-MM-DD)", name: "date", widget: "string" }
+              - { label: "Heure (ex: 16:00)", name: "time", widget: "string", required: false }
+              - { label: "Lieu", name: "location", widget: "string", required: false }
+              - { label: "Résumé", name: "summary", widget: "text" }
+              - { label: "Lien RSVP (WhatsApp/Tally)", name: "rsvp_url", widget: "string", required: false }
+              - label: "Statut"
+                name: "status"
+                widget: "select"
+                options: ["draft","published","archived"]
+                default: "published"
+
+      - label: "Témoignages"
+        name: "testimonials"
+        file: "data/testimonials.json"
+        format: "json"
+        fields:
+          - label: "Témoignages"
+            name: "testimonials"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { label: "Nom", name: "name", widget: "string" }
+              - { label: "Rôle / Ville", name: "role", widget: "string", required: false }
+              - { label: "Citation", name: "quote", widget: "text" }
+
+      - label: "Annonces"
+        name: "announcements"
+        file: "data/announcements.json"
+        format: "json"
+        fields:
+          - label: "Annonces"
+            name: "announcements"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.date}}"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Date (YYYY-MM-DD)", name: "date", widget: "string" }
+              - { label: "Texte", name: "body", widget: "markdown" }
+              - label: "Statut"
+                name: "status"
+                widget: "select"
+                options: ["draft","published","archived"]
+                default: "published"
