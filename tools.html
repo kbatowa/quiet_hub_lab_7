@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Outils — Quiet Hub Lab 7</title>
+<meta content="Outils gratuits pour entrepreneurs à Lomé: ROI, marge, point mort, valeur client et cashflow. Rapide, clair, sans cinéma." name="description"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="topbar"></div>
+<div class="notice">Construit à Lomé • Pour le Togo • Pour l’Afrique de l’Ouest</div>
+<div class="header">
+<div class="navwrap">
+<a class="brand" href="index.html">Quiet Hub Lab 7</a>
+<div class="nav">
+<a href="lucask.html">Business</a>
+<a href="coachluc.html">Coaching</a>
+<a href="community.html">Communauté</a>
+<a href="events.html">Events</a>
+<a href="tools.html">Outils</a>
+<a href="donpix.html">DonPix</a>
+<a href="eqproject.html">EQPROJECT</a>
+</div>
+</div>
+</div>
+<div class="pagehero">
+<div class="pagehero-inner">
+<div class="pagehero-text">
+<h1>Coach LUC</h1>
+<p class="subtitle">Coaching business, discipline, clarté. On avance sans bruit.</p>
+<div class="ctas">
+<a class="btn primary" href="https://wa.me/22871202746?text=Bonjour%20Quiet%20Hub%20Lab%207%20—%20je%20veux%20un%20coaching.">WhatsApp direct</a>
+<a class="btn" href="index.html#contact">Contact</a>
+</div>
+</div>
+<img alt="Coach LUC" class="pagehero-img" src="assets/img/community.webp"/>
+</div>
+</div>
+<div class="container">
+<main>
+<section>
+<div class="container">
+<div class="section-title">
+<h1 class="icon-wrap"><img alt="" class="icon" src="assets/icons/calculator.svg"/>Outils business (gratuits)</h1>
+<p>Des calculateurs simples pour décider vite. Tu mets tes chiffres, le site te donne une lecture claire — et si tu veux, on le vérifie ensemble sur WhatsApp.</p>
+</div>
+<div class="cards">
+<div class="card">
+<h3 class="icon-wrap"><img alt="" class="icon" src="assets/icons/briefcase.svg"/>Pour quoi ça sert ?</h3>
+<p>Éviter les business “à l’aveugle”. Estimer marge, point mort, rentabilité, et comprendre si l’idée tient debout.</p>
+</div>
+<div class="card">
+<h3 class="icon-wrap"><img alt="" class="icon" src="assets/icons/handshake.svg"/>Lecture simple</h3>
+<p>Pas de jargon. Juste une interprétation terrain, adaptée à Lomé (coûts, volumes, réalités clients).</p>
+</div>
+<div class="card">
+<h3 class="icon-wrap"><img alt="" class="icon" src="assets/icons/microphone.svg"/>Option note vocale</h3>
+<p>Tu peux aussi m’envoyer une note vocale avec ton contexte. Je te réponds avec un plan clair.</p>
+</div>
+</div>
+<div class="tools-grid">
+<div class="tool-card">
+<h3>1) ROI (retour sur investissement)</h3>
+<p>Estime si ce que tu gagnes vaut l’argent que tu mets.</p>
+<div class="tool-form two">
+<div>
+<label for="roi_invest">Investissement total (F CFA)</label>
+<input id="roi_invest" inputmode="numeric" placeholder="ex: 200000" type="number" value="200000"/>
+</div>
+<div>
+<label for="roi_profit">Gain / profit net (F CFA)</label>
+<input id="roi_profit" inputmode="numeric" placeholder="ex: 80000" type="number" value="80000"/>
+</div>
+</div>
+<div class="result" id="roi_out"></div>
+<div class="small-note">Astuce: Utilise “profit net” (après charges), pas juste le chiffre d’affaires.</div>
+</div>
+<div class="tool-card">
+<h3>2) Marge &amp; bénéfice par unité</h3>
+<p>Pour savoir si ton prix est bon (et si tu peux payer livraison/agents sans mourir).</p>
+<div class="tool-form two">
+<div>
+<label for="m_price">Prix de vente (F CFA)</label>
+<input id="m_price" inputmode="numeric" placeholder="ex: 2000" type="number" value="2000"/>
+</div>
+<div>
+<label for="m_cost">Coût total (F CFA)</label>
+<input id="m_cost" inputmode="numeric" placeholder="ex: 1200" type="number" value="1200"/>
+</div>
+</div>
+<div class="result" id="m_out"></div>
+<div class="small-note">Coût total = matière + main d’œuvre + transport + emballage + pertes.</div>
+</div>
+<div class="tool-card">
+<h3>3) Point mort (Break-even)</h3>
+<p>Combien de ventes tu dois faire pour couvrir tes charges fixes.</p>
+<div class="tool-form two">
+<div>
+<label for="be_fixed">Charges fixes / mois (F CFA)</label>
+<input id="be_fixed" inputmode="numeric" placeholder="ex: 150000" type="number" value="150000"/>
+</div>
+<div>
+<label for="be_price">Prix de vente (F CFA)</label>
+<input id="be_price" inputmode="numeric" placeholder="ex: 2000" type="number" value="2000"/>
+</div>
+<div>
+<label for="be_var">Coût variable / unité (F CFA)</label>
+<input id="be_var" inputmode="numeric" placeholder="ex: 1200" type="number" value="1200"/>
+</div>
+</div>
+<div class="result" id="be_out"></div>
+<div class="small-note">Si le point mort est trop haut, on ajuste prix, coût, ou on change le modèle.</div>
+</div>
+<div class="tool-card">
+<h3>4) Valeur client (CLV)</h3>
+<p>Combien un client vaut sur la durée (utile pour décider pub &amp; fidélité).</p>
+<div class="tool-form two">
+<div>
+<label for="clv_avg">Panier moyen (F CFA)</label>
+<input id="clv_avg" inputmode="numeric" placeholder="ex: 5000" type="number" value="5000"/>
+</div>
+<div>
+<label for="clv_freq">Achats / mois</label>
+<input id="clv_freq" inputmode="numeric" placeholder="ex: 2" type="number" value="2"/>
+</div>
+<div>
+<label for="clv_months">Durée (mois)</label>
+<input id="clv_months" inputmode="numeric" placeholder="ex: 12" type="number" value="12"/>
+</div>
+</div>
+<div class="result" id="clv_out"></div>
+<div class="small-note">CLV te dit combien tu peux dépenser pour acquérir un client sans te perdre.</div>
+</div>
+<div class="tool-card">
+<h3>5) Projection cashflow (simple)</h3>
+<p>Une lecture rapide: entrée – sortie, et projection sur quelques mois.</p>
+<div class="tool-form two">
+<div>
+<label for="c_in">Entrées / mois (F CFA)</label>
+<input id="c_in" inputmode="numeric" placeholder="ex: 400000" type="number" value="400000"/>
+</div>
+<div>
+<label for="c_out">Sorties / mois (F CFA)</label>
+<input id="c_out" inputmode="numeric" placeholder="ex: 320000" type="number" value="320000"/>
+</div>
+<div>
+<label for="c_months">Projection (mois)</label>
+<input id="c_months" inputmode="numeric" placeholder="ex: 6" type="number" value="6"/>
+</div>
+</div>
+<div class="result" id="c_outbox"></div>
+<div class="small-note">Ce n’est pas une compta complète — c’est un “radar” pour la décision.</div>
+</div>
+<div class="tool-card">
+<h3>Besoin d’aide pour interpréter ?</h3>
+<p>Envoie tes chiffres + ton contexte. Tu peux écrire ou envoyer une note vocale.</p>
+<div class="cta-row">
+<a class="btn primary" href="https://wa.me/22871202746?text=Bonjour%20Quiet%20Hub%20Lab%207%20-%20Je%20viens%20de%20tester%20les%20outils%20(et%20j%E2%80%99ai%20besoin%20d%E2%80%99aide%20pour%20interpr%C3%A9ter).">WhatsApp (message)</a>
+<a class="btn" href="https://wa.me/22871202746">WhatsApp (note vocale)</a>
+</div>
+<div class="small-note">Disclaimer: Les calculs sont indicatifs. Les décisions finales doivent tenir compte du terrain (concurrence, saison, cash, logistique).</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div class="footer">
+<div><strong>WhatsApp :</strong> <a href="https://wa.me/22871202746">+228 71 20 27 46</a></div>
+<div><strong>Email :</strong> <a href="mailto:togohub.coach@gmail.com">togohub.coach@gmail.com</a></div>
+<div><strong>Ville :</strong> Lomé, Togo</div>
+</div>
+<a class="fab" href="https://wa.me/22871202746">WhatsApp</a>
+</div>
+<script defer="" src="assets/js/tools.js"></script>
+</body>
+</html>
